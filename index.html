@@ -1,27 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SOC Lab Portfolio</title>
+  <meta charset="UTF-8">
+  <title>SOC Analyst Portfolio</title>
   <style>
     body {
-      font-family: Arial;
-      background-color: #0f172a;
-      color: #e2e8f0;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0a0f1c;
+      color: #e5e7eb;
     }
+
     header {
-      background: #020617;
-      padding: 20px;
+      background: linear-gradient(90deg, #020617, #0f172a);
+      padding: 40px;
       text-align: center;
+      border-bottom: 1px solid #1f2937;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #38bdf8;
+    }
+
+    header p {
+      color: #94a3b8;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px;
+      background: #020617;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     section {
-      padding: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
     }
+
+    h2 {
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
+      color: #38bdf8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
     .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    .tag {
+      display: inline-block;
       background: #1e293b;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #64748b;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -29,35 +104,69 @@
 <body>
 
 <header>
-  <h1>My SOC Lab Portfolio</h1>
-  <p>Cybersecurity | SOC Analyst Journey</p>
+  <h1>Stephane | SOC Analyst</h1>
+  <p>Threat Detection • Incident Response • Log Analysis</p>
 </header>
 
-<section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+</nav>
+
+<section id="about">
   <h2>About Me</h2>
-  <p>I am building hands-on SOC skills including incident response, SIEM, and log analysis.</p>
+  <p>
+    I am a cybersecurity professional focused on SOC operations, threat detection,
+    and incident response. I build hands-on labs to simulate real-world attacks
+    and strengthen my defensive skills.
+  </p>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <div class="card">Log Analysis</div>
-  <div class="card">SIEM (Splunk)</div>
-  <div class="card">PowerShell</div>
-  <div class="card">Network Security</div>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <div class="card">
-    <h3>Brute Force Attack Investigation</h3>
-    <p>Analyzed failed login attempts and identified attacker IP.</p>
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>SIEM</h3>
+      <p>Splunk, Log Analysis, Event Correlation</p>
+    </div>
+    <div class="card">
+      <h3>Security Tools</h3>
+      <p>Nmap, Wireshark, Hydra</p>
+    </div>
+    <div class="card">
+      <h3>Scripting</h3>
+      <p>PowerShell, Basic Python</p>
+    </div>
+    <div class="card">
+      <h3>Systems</h3>
+      <p>Windows Logs, Linux Basics</p>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+<section id="projects">
+  <h2>Security Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Brute Force Attack Investigation</h3>
+      <p>Analyzed failed login attempts using Windows Event Logs.</p>
+      <a class="button" href="incident-reports/incident-001.md">View Report</a>
+    </div>
+
+    <div class="card">
+      <h3>Port Scanning Detection</h3>
+      <p>Identified open ports and scanning behavior using Nmap.</p>
+      <a class="button" href="attack-simulations/port-scan-nmap.md">View Lab</a>
+    </div>
+
+  </div>
 </section>
+
+<footer>
+  <p>© 2026 Stephane | Built on GitHub Pages</p>
+</footer>
 
 </body>
 </html>
